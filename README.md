@@ -1,10 +1,7 @@
 # Reo.js
-
-
-
-## Reo API 方法
-
-
+部分api还在更新中...
+## Reo API
+更多Reo.js方法在路上...
 ### hook()
 
 实现钩子调用机制，简单的hook一下构建的构造模块，即可调用到原型链的对象或方法，并且接收外部传递的参数。
@@ -49,8 +46,9 @@ $success
 })
 .success( msg1 , msg2 , msg3 , msg4 );
 
-
-调用模块：
+```
+调用模块(invoking module)：
+```js
 var bug = function  (options) {};
 bug.prototype = {
     success: function  (a,b,c,dom) {
