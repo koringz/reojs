@@ -18,9 +18,9 @@
 var $node = document.querySelector('.test'); // dom节点
 
 var 
-    Number_one = '5',
-    Number_two = '10',
-    Number_three = '25';
+    Number_one = 5,
+    Number_two = 10,
+    Number_three = 25;
 
 var $data = { // 配置数据 assign
     module : 'bug', // 模块 function bug() {}
