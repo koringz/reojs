@@ -15,7 +15,7 @@
 ```
 
 ```js
-var $node = document.querySelector('test_case_01'); // dom节点
+var $node = document.querySelector('.test'); // dom节点
 
 var 
     Number_one = '5',
