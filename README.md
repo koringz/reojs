@@ -53,9 +53,9 @@ $success
 调用模块：
 var bug = function  (options) {};
 bug.prototype = {
-success: function  (a,b,c,dom) {
-    dom.innerHTML = a + b + c; // 8 + 15 +30
-    // 输出 return : 53
-}
+    success: function  (a,b,c,dom) {
+        dom.innerHTML = a + b + c; // 8 + 15 +30
+        // 输出 return : 53
+    }
 }
 ```
