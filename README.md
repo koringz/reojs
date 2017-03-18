@@ -22,20 +22,16 @@ var
     Number_two = 10,
     Number_three = 25;
 
-var $data = { // 配置数据 assign
-    module : 'bug', // 模块 function bug() {}
-    val : Number_one // 原始值 5
-};
 
-var Hook     = new hook();
+var Reo = new Reo();
 
-var $success = Hook.model({
-    el : $node,
-    assign : $data
-});
-
-$success
-.next(function ( msg ) {
+Reo.hook({
+    el:$node,
+    assign:{ // 配置数据 assign
+        module:'bug', // 模块 function bug() {}
+        val:Number_one // 原始值 5
+})
+.next(function ( msg ) { // msg = 5
     return msg + 3; // 8
 },function ( msg ) {
     return msg + Number_two;  //  15
