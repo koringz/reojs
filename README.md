@@ -28,12 +28,14 @@ Simple Call
 如果你已经写好了HTML样式，接下来使用JavaScript的hook方法来显示数据信息。
 
 例如：
-```js
 
+```js
+var Reo = new Reo();
+```
+定义变量hook，调用static模块：
+```js
 var $test01 = document.querySelector('.test01'), // dom节点
     cout = 2;
-
-var Reo = new Reo();
 
 var hook = Reo.hook({
         el : $test01,
@@ -42,10 +44,11 @@ var hook = Reo.hook({
             val : 3 // 原始值 3
         }
     });
+```
+输出结果：
+```js
 var val = hook.next(function ( msg ) {return msg + 3 }).success( msg1, $test01 ); // 输出 return : 8
-
-$test01.innerText = val;
-// 注：msg 为初始值 3，msg1是next的第一个函数的结果 6
+$test01.innerText = val;  // 注：msg 为初始值 3，msg1是next的第一个函数的结果 6
 ```
 调用依赖模块(invoking module)：
 ```js
