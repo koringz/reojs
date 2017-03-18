@@ -25,7 +25,7 @@ Simple Call
     </div>
 </div>
 ```
-如果你已经写好了HTML样式，接下来使用JavaScript的hook方法来显示数据信息。
+如果你已经写好了HTML样式，接下来使用Reo库的方法。
 
 例如：
 
