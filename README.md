@@ -1,5 +1,11 @@
 # Reo.js
 部分api更新中...
+
+## Idea想法：
+Fast visibale
+
+Simple Call
+
 ## API
 
 - `hook` 实现钩子调用机制，简单的hook一下，即可调用到原型链的对象或方法，并且传递参数。
@@ -36,7 +42,8 @@ var hook = Reo.hook({
         }
     });
 var val = hook.next(function ( msg ) {return msg + 3 }).success( msg1, $test01 ); // 输出 return : 8
-    $test01.innerText = val;
+
+$test01.innerText = val;
 // 注：msg 为初始值 3，msg1是next的第一个函数的结果 6
 ```
 调用依赖模块(invoking module)：
@@ -46,3 +53,6 @@ static.prototype.success = function  (a,b) {
 		return a + b;
 }
 ```
+
+## License：
+Copyright (c) 2017-2025 koringz <ok234@foxmail.com> https://koringz.github.io
