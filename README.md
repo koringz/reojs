@@ -45,9 +45,12 @@ var hook = Reo.hook({
         }
     });
 ```
-输出结果：
+获得值：
 ```js
 var val = hook.next(function ( msg ) {return msg + 3 }).success( msg1, cout ); // 输出 return : 8
+```
+输出值
+```js
 $test01.innerText = val;  // 注：msg 为初始值 3，msg1是next的第一个函数的结果 6
 ```
 调用依赖模块(invoking module)：
