@@ -34,9 +34,6 @@ var Reo = new Reo();
 ```
 定义变量hook，调用static模块：
 ```js
-var $test01 = document.querySelector('.test01'), // dom节点
-    cout = 2;
-
 var hook = Reo.hook({
         el : $test01,
         assign : { // 配置数据 assign
@@ -47,13 +44,14 @@ var hook = Reo.hook({
 ```
 获得值：
 ```js
+var cout = 2;
 var val = hook.next(function ( msg ) {return msg + 3 }).success( msg1, cout ); 
 // 输出 return : 8
 // 注：msg 为初始值 3，msg1是next的第一个函数的结果 6
 ```
 显示结果：
 ```js
-$test01.innerText = val;  
+document.querySelector('.test01').innerText = val;  
 ```
 调用依赖模块(invoking module)：
 ```js
