@@ -15,16 +15,12 @@
 ```
 
 ```js
-var $node = document.querySelector('.test'); // dom节点
-
-var 
-    Number_one = 5,
+var Number_one = 5,
     Number_two = 10,
     Number_three = 25;
-
+var $node = document.querySelector('.test'); // dom节点
 
 var Reo = new Reo();
-
 Reo.hook({
     el:$node,
     assign:{ // 配置数据 assign
