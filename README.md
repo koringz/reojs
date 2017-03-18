@@ -4,7 +4,7 @@
 
 - `hook` 实现钩子调用机制，简单的hook一下，即可调用到原型链的对象或方法，并且传递参数。
 
-超多Reo.js方法正在赶往的途中...
+- 超多Reo.js方法正在赶往的途中...
 
 ## Documentation文档
 
@@ -18,7 +18,9 @@
     </div>
 </div>
 ```
+如果你已经写好了HTML样式，接下来使用JavaScript的hook方法来显示数据信息。
 
+例如：
 ```js
 
 var $test01 = document.querySelector('.test01'), // dom节点
@@ -37,7 +39,7 @@ var val = hook.next(function ( msg ) {return msg + 3 }).success( msg1, $test01 )
     $test01.innerText = val;
 // 注：msg 为初始值 3，msg1是next的第一个函数的结果 6
 ```
-调用模块(invoking module)：
+调用依赖模块(invoking module)：
 ```js
 var static = function  () {};
 static.prototype.success = function  (a,b) {
