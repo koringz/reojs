@@ -35,7 +35,7 @@ var Reo = new Reo();
 定义变量hook，调用static模块：
 ```js
 var hook = Reo.hook({
-        el : $test01,
+        el : 'test01',
         assign : { // 配置数据 assign
             module : 'static', // 模块 function bug() {}
             val : 3 // 原始值 3
