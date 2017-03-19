@@ -42,7 +42,7 @@ var hook = Reo.hook({
         }
     });
 ```
-获得值：
+传参数并获得调用的方法：
 ```js
 var cout = 2;
 var val = hook.next(function ( msg ) {return msg + 3 }).success( msg1, cout ); 
