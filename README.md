@@ -1,7 +1,7 @@
 # Reo.js
 部分api更新中...
 
-## Idea想法：
+## Idea
 Fast visibale
 
 Simple Call
@@ -12,7 +12,7 @@ Simple Call
 
 - 超多Reo.js方法正在赶往的途中...
 
-## Documentation文档
+## Documentation
 
   通过`hook`钩子的调用机制，能够轻松的帮你调用到构造模块，注意：这个模块是自定义的构造函数，比如：`var static = function () {}`或者`function static () {}`。接着获取模块的原型链对象，原型链的写法主要参照原生JavaScript写法。最后我们可以向原型链的方法里面传递参数。
 如果调用一个模块module时，没有手动定义`next()`方法，就会失去调用模块的原型链对象，所以，在调用的时，一定要有原型链。
