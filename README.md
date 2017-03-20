@@ -28,7 +28,9 @@ function static () {};
 static.prototype.success = function  (a,b) {
     b.innerText = a;
 }
+```
 
+```js
 // 定义一个元素
 var test01 = document.querySelector('.test01');
 
