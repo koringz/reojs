@@ -2,7 +2,7 @@
 部分api更新中...
 
 ## Idea
-Fast visibale
+Fast Visibale
 
 Simple Call
 
