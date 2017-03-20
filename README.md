@@ -22,6 +22,13 @@ Simple Call
 例如：
 
 ```js
+
+// 管理组织模块
+function static () {};
+static.prototype.success = function  (a,b) {
+    b.innerText = a;
+}
+
 // 定义一个元素
 var test01 = document.querySelector('.test01');
 
@@ -37,19 +44,13 @@ var hook = Reo.hook({
 });
 
 // 创建一个返回值
-var own_value = hook.next(function ( msg ) {
+var own_next = hook.next(function ( msg ) {
     // msg 为val初始值 = 3
     return msg + 3; 
 });
 
 // 获得一个组织对象
-own_value.success( msg1, test01);
-
-// 管理组织模块
-var static = function  () {};
-static.prototype.success = function  (a,b) {
-    b.innerText = a;
-}
+own_next.success( msg1, test01);
 
 ```
 
