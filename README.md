@@ -18,46 +18,39 @@ Simple Call
 如果调用一个模块module时，没有手动定义`next()`方法，就会失去调用模块的原型链对象，所以，在调用模块时，一定要有原型链。
 
   多次调用的时候，为了不改变模块内部`this`指针，你需要自定义`hook`方法。自定义方法如：`var hook = Reo.hook()`。可以在不同的地方随时调用不同的模块，方便快捷。
-```html
-<div class="container">
-    <div class="top">
-        return value : <code class="test01">8</code>
-    </div>
-</div>
-```
-如果你已经写好了HTML样式，接下来使用Reo库的方法。
 
 例如：
 
 ```js
+// 定义一个元素
+var test01 = document.querySelector('.test01').innerText;
+
+// 创建一个Reo对象
 var Reo = new Reo();
-```
-定义变量hook，调用static模块：
-```js
+
+// 创建一个管理模块的钩子
 var hook = Reo.hook({
-        el : '.test01',
-        assign : { // 配置数据 assign
-            module : 'static', // 模块 function static() {}
-            val : 3 // 原始值 3
-        }
-    });
-```
-传参数并获得调用的方法(如:success())：
-```js
-var cout = 2;
-var val = hook.next(function ( msg ) {return msg + 3 }).success( msg1, cout ); // 输出 return : 8
-// 注：msg 为assign.val初始值 3，msg1是hook.next()的第一个函数的返回结果 6
-```
-显示结果：
-```js
-document.querySelector('.test01').innerText = val;  
-```
-调用依赖模块(invoking module)：
-```js
+    // 模块 function static() {}
+    module : 'static', 
+    // 原始值 3
+    val : 3 
+});
+
+// 创建一个返回值
+var own_value = hook.next(function ( msg ) {
+    // msg 为val初始值 = 3
+    return msg + 3; 
+});
+
+// 获得一个组织对象
+own_value.success( msg1, test01);
+
+// 管理组织模块
 var static = function  () {};
 static.prototype.success = function  (a,b) {
-		return a + b;
+    b.innerText = a;
 }
+
 ```
 
 ## License：
