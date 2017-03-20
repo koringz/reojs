@@ -62,9 +62,15 @@ own_next.success( msg1, test01 );
 
 ```
 ### chain
-首先，我们需要进入`chain`，`chain(...)`入口recieving一个对象。此对象默认属性default可读、可写，也可以认为`writable`和`readable`布尔值返回`true`。value是一个数组对象，接收值以数组的形式存在(arguments，array，null)。调用`then`方法传入value第一个参数值，并且每次调用`then(...)`方法时，都会依次从value数组内部获取一个参数值。于是，我们可以使用左侧var定义的变量名money_totals输出结果，输出结果调用的方法为`next(...)`。
-`then()`方法内部的第一个参数为自定义，必填选项。第二个参数message不是必填，但是参数message需要从第二个`then`方法开始记录。因为message捕捉上一个then方法的输出值，因此从第二个then链式开始就必须定义才能拿到上一个then的return值。
-then方法的第三个参数是api方法，主要是替代内部的return方法，api方法主要还是一个arguments数组对象的形式。所以，我们在then内部只能有一个api方法，调用的then时，REO.js会自动输出传入api括号的值。最后，通过next方获取到then链式的结果，实现的方法按照顺序的方式执行，还可以通过for循环一次执行获得指定的then结果。
+
+  首先，我们需要进入`chain`，`chain(...)`入口recieving一个对象。此对象默认属性default可读、可写，也可以认为`writable`和`readable`布尔值返回`true`。value是一个数组对象，接收值以数组的形式存在(arguments，array，null)。调用`then`方法传入value第一个参数值，并且每次调用`then(...)`方法时，都会依次从val数组内部获取一个参数值。于是，我们可以使用左侧var定义的变量名输出结果，输出结果调用的方法为`varName.next(...)`。
+
+  `then()`方法内部的第一个参数为自定义，必填选项。第二个参数message不是必填，但是参数message需要从第二个`then`方法开始记录。因为message捕捉上一个then方法的输出值，因此从第二个then链式开始就必须定义才能拿到上一个then的返回值。
+
+  then方法的第三个参数是api方法，主要是替代内部的回调作用，api方法主要还是一个arguments数组对象的形式。
+  
+  所以，我们在then内部只能有一个api方法，当调用api方法时，REO.js会自动输出传入api括号的值。最后，通过next方获取到then链式的结果，实现的方法按照顺序的方式执行。
+  
 例如：
 ```js
 
