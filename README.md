@@ -35,9 +35,9 @@ var Reo = new Reo();
 定义变量hook，调用static模块：
 ```js
 var hook = Reo.hook({
-        el : 'test01',
+        el : '.test01',
         assign : { // 配置数据 assign
-            module : 'static', // 模块 function bug() {}
+            module : 'static', // 模块 function static() {}
             val : 3 // 原始值 3
         }
     });
@@ -45,9 +45,8 @@ var hook = Reo.hook({
 传参数并获得调用的方法(如:success())：
 ```js
 var cout = 2;
-var val = hook.next(function ( msg ) {return msg + 3 }).success( msg1, cout ); 
-// 输出 return : 8
-// 注：msg 为初始值 3，msg1是next的第一个函数的结果 6
+var val = hook.next(function ( msg ) {return msg + 3 }).success( msg1, cout ); // 输出 return : 8
+注：msg 为初始值 3，msg1是next的第一个函数的结果 6
 ```
 显示结果：
 ```js
