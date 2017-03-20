@@ -91,7 +91,7 @@ Chain.then(function ( mes1 ) {
     api( mes3 + massages );
 });
 
-// 一次获得then的返回值
+// 依次获得then的返回值
 var first = Chain.next(), // 25
     second = Chain.next(), // 15
     third = Chain.next(); // 20
