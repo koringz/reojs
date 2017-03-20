@@ -9,7 +9,7 @@ Simple Call
 ## API
 
 - `hook` 钩子调用机制，只要调用hook()方法，就能调用原型链的对象或方法，还可传递参数。
-- `chain` 链式调用机制，通过chain()入口传递参数，实现链式then调用的函数方法。
+- `chain` 链式调用机制，通过chain()入口传递参数，然后用then实现链式调用。
 - 超多Reo.js方法正在赶往的途中...
 
 ## Documentation
