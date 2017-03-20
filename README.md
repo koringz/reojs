@@ -70,8 +70,6 @@ then方法的第三个参数是api方法，主要是替代内部的return方法�
 
 var fontAlgo = document.querySelector('.fontAlgo');
 
-var REO = new Reo();
-
 var Chain = REO.chain({
     module : 'next',
     val: [2,3,5] // mes1 = 2 ,mes2 = 3, mes3 = 5
