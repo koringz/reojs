@@ -14,6 +14,7 @@ Simple Call
 
 ## Documentation
 
+    在调用Reo API方法之前，需要实例一个Reojs库方便调用。
 ```js
 
 // 创建一个Reo对象
