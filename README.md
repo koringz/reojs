@@ -23,7 +23,7 @@ Simple Call
 
 ```js
 // 定义一个元素
-var test01 = document.querySelector('.test01').innerText;
+var test01 = document.querySelector('.test01');
 
 // 创建一个Reo对象
 var Reo = new Reo();
