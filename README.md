@@ -1,5 +1,5 @@
 # Reo.js
-部分api更新中...
+api更新中...
 
 ## Idea
 Fast Visibale
