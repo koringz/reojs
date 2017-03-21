@@ -77,7 +77,7 @@ var fontAlgo = document.querySelector('.fontAlgo');
 // 创建一个链式方法
 var Chain = REO.chain({
     module : 'next',
-    val: [2,3,5] // mes1 = 2 ,mes2 = 3, mes3 = 5
+    val: [22,3,5] // mes1 = 22 ,mes2 = 3, mes3 = 5
 });
 
 // 使用链式调用
