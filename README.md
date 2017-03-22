@@ -57,7 +57,7 @@ var own_next = hook.next(function ( msg ) {
 });
 
 // 获得一个组织对象
-own_next.success( msg1, msg2, test01 );
+own_next.success( msg1, test01, msg2);
 // return: 6 
 </script>
 ```
