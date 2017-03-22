@@ -1,5 +1,5 @@
 # Reo.js
-这是一个原生的js库，封装的方法是基于js函数的扩展，不需要其他js插件功能，只要调用reojs库的方法就可以。由于是本月开始写reojs库，所以目前还在测试中，敬请期待。reojs库感谢大家的支持，如果使用的过程出现了问题，可以交流讨论。
+这是一个原生的js库，封装的方法是基于js函数的扩展，不需要其他js插件功能，只要调用reojs库的方法就可以。由于是本月开始写reojs库，所以目前还在测试中，你可以阅读README.md阐述。reojs库感谢大家的支持，如果使用的过程出现了问题，可以交流讨论。
 
 ## Idea
 Fast Visibale
@@ -51,11 +51,13 @@ var hook = Reo.hook({
 // 创建一个返回值
 var own_next = hook.next(function ( msg ) {
     // msg 为val初始值 = 3
-    return msg + 3; 
+    return msg + 3;  //  6
+},function ( msg ) {
+    return msg + 5;  //  8
 });
 
 // 获得一个组织对象
-own_next.success( msg1, test01 );
+own_next.success( msg1, msg2, test01 );
 // return: 6 
 </script>
 ```
