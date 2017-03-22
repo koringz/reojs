@@ -30,15 +30,13 @@ var Reo = new Reo();
 例如：
 
 ```js
-
+<script>
 // 管理组织模块
 function static () {};
 static.prototype.success = function  (a,b) {
     b.innerText = a;
 }
-```
 
-```js
 // 定义一个元素
 var test01 = document.querySelector('.test01');
 
@@ -59,7 +57,7 @@ var own_next = hook.next(function ( msg ) {
 // 获得一个组织对象
 own_next.success( msg1, test01 );
 // return: 6 
-
+</script>
 ```
 ### chain
 
@@ -71,6 +69,7 @@ own_next.success( msg1, test01 );
   
 例如：
 ```js
+<script>
 // 定义一个元素
 var fontAlgo = document.querySelector('.fontAlgo');
 
@@ -98,7 +97,7 @@ var first = Chain.next(), // 25
 
 fontAlgo.innerText = first + ',' + second + ',' + third;
 // 25,15,20
-
+</script>
 ```
 
 ## License：
