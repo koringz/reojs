@@ -1,6 +1,9 @@
 # Reo.js
 这是一个原生的js库，封装的方法是基于js函数的扩展，不需要其他js插件功能，只要调用reojs库的方法就可以。由于是本月开始写reojs库，所以目前还在测试中，你可以阅读README.md阐述。reojs库感谢大家的支持，如果使用的过程出现了问题，可以交流讨论。
 
+## update push
+推送第一个API方法：then(链式调用)。
+
 ## Idea
 Fast Visibale
 
