@@ -89,6 +89,7 @@
         this.userModel = {};
         mains.push(this)
     };
+
     order.prototype = {
 
         set: function() {
@@ -241,7 +242,9 @@
             }
             return results
         },
+
         debug: debug
+        
     };
 
     function warn(options, log) {
@@ -254,7 +257,7 @@
         window.console.warn(options)
     },
     'disable write. call function err.');
-    
+
     if (typeof module !== 'undefined' && module.exports && window.module !== module) {
         module.exports = REO
     } else if (typeof define === 'function' && define.amd) {
