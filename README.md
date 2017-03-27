@@ -105,5 +105,25 @@ fontAlgo.innerText = first + ',' + second + ',' + third;
 </script>
 ```
 
+类似写法如下：
+```js
+<script>
+// 自定义模块名
+var Chain = Reo.chain({
+    module : 'costom_module',
+    val: [22,3,5] // mes1 = 22 ,mes2 = 3, mes3 = 5
+});
+
+// 输出方法一
+Chain.next();
+
+// 输出方法二
+Chain.costom_module();
+
+// 输出方法三(表示输出所有)
+Chain.all();
+</script>
+```
+
 ## License：
 Copyright (c) 2017-2025 koringz <ok234@foxmail.com> https://koringz.github.io
