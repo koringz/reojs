@@ -46,6 +46,7 @@
         this.options = new order(element, options) || {};
         return this.options
     };
+
     var order = function(element, options) {
         this._element = element;
         this._content = options;
@@ -68,6 +69,7 @@
             },
             groups: []
         };
+
         this.thenCallInherit = {
             storage: [],
             station: [],
@@ -75,6 +77,7 @@
             chainStorageApi: [],
             backUpremoveStorage: []
         };
+
         this.other = {
             getContainers: null,
             defaultOrders: [],
@@ -82,10 +85,12 @@
             dynamicParameter: [],
             useToExtend: {}
         };
+
         this.userModel = {};
         mains.push(this)
     };
     order.prototype = {
+
         set: function() {
             var args = arguments[0];
             for (var prop in args) {
@@ -97,6 +102,7 @@
                 }
             }
         },
+
         chain: function(options) {
             var options = options ? options: undefined;
             if (isObj(options)) {
@@ -121,6 +127,7 @@
             }
             return this
         },
+
         rebuild: function() {
             return this.group(function(previousScope, attr) {
                 var that = previousScope,
@@ -132,6 +139,7 @@
                 return getGroups
             })
         },
+
         recieving: function() {
             var args = arguments[0];
             if (args instanceof Array || args instanceof String) {
@@ -140,6 +148,7 @@
                 return false
             }
         },
+
         group: function() {
             var getModuleName, len = arguments[0],
             args = len(this, this.acceptCallInherit);
@@ -148,6 +157,7 @@
             }
             this.acceptCallInherit.initailizationStatus = getModuleName[0]
         },
+
         defineInvoking: function() {
             var customInvokingModel = this.acceptCallInherit.initailizationStatus.module;
             this.userModel[customInvokingModel] = this.next;
@@ -158,6 +168,7 @@
             }
             return this
         },
+
         then: function(fn) {
             var that = this,
             output = null,
@@ -178,27 +189,33 @@
                 return this.defineInvoking()
             }
         },
+
         observerDynamicData: function(options) {
             if (options in this.other) {
                 var param = this.other[options]
             }
             return param = param ? param: null
         },
+
         getArguments: function() {
             var args = arraySlice.call(arguments);
             return args
         },
+
         saveDelayRemoveData: function(options) {
             this.thenCallInherit.backUpremoveStorage.push(options)
         },
+
         all: function() {
             return false
         },
+
         getShift: function() {
             if (arguments.length > 0) {
                 return arguments[0].shift()
             }
         },
+
         next: function() {
             var getStorageFunction = this.getShift(this.thenCallInherit.storage),
             getStorageFunctionArgument = arraySlice.call([getStorageFunction]),
@@ -232,10 +249,12 @@
             options.call(this, log)
         }
     };
+
     var debug = warn(function(options) {
         window.console.warn(options)
     },
     'disable write. call function err.');
+    
     if (typeof module !== 'undefined' && module.exports && window.module !== module) {
         module.exports = REO
     } else if (typeof define === 'function' && define.amd) {
@@ -243,4 +262,5 @@
     } else {
         exports.Reo = REO
     }
+
 })(typeof window !== 'undefined' ? this: global);
