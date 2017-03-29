@@ -212,24 +212,26 @@
         },
 
         getShift: function() {
+            var getShift;
             if (arguments.length > 0) {
-                return arguments[0].shift()
+                getShift = arguments[0].shift()
             }
+            return getShift
         },
 
         next: function() {
+            
             var getStorageFunction = this.getShift(this.thenCallInherit.storage),
-            getStorageFunctionArgument = arraySlice.call([getStorageFunction]),
-            getchainStorageValue = this.getShift(this.thenCallInherit.chainStorage),
-            getStationValue = this.getShift(this.thenCallInherit.station),
-            results = null,
-            that = this;
+                getStorageFunctionArgument = arraySlice.call([getStorageFunction]),
+                getchainStorageValue = this.getShift(this.thenCallInherit.chainStorage),
+                getStationValue = this.getShift(this.thenCallInherit.station),
+                results = null,
+                that = this;
             this.saveDelayRemoveData(getStationValue);
             getStorageFunctionArgument.forEach(function(methods) {
-                results = methods(getStationValue, getchainStorageValue,
-                function() {
+                results = methods(function() {
                     that.thenCallInherit.chainStorageApi.push(arguments)
-                })
+                }, getStationValue, getchainStorageValue);
             });
             if (results === undefined) {
                 var chainStorageApiValue = this.thenCallInherit.chainStorageApi[0][0];
