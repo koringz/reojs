@@ -199,6 +199,7 @@
 		all: function() {
 			var params, i = 0;
 			var checkThenArgument = this.thenCallInherit.storage;
+			this.final();
 			if (checkThenArgument.length > 0) {
 				var waitData;
 				while (i < checkThenArgument.length) {
@@ -245,6 +246,11 @@
 					return that.thenCallInherit.chainStorage[0]
 				}
 			}([])
+		},
+		final:function  () {
+			if(this.thenCallInherit.backUpStorage.length > 0){
+				this.thenCallInherit.backUpStorage = [];
+			}
 		},
 		debug: debug
 	};
