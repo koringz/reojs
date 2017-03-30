@@ -85,13 +85,13 @@ var Chain = Reo.chain({
 });
 
 // 使用链式调用
-Chain.then(function ( mes1 ) {
-    return mes1+3;
+Chain.then(function ( api, mes1 ) {
+    api( mes1 + 3 );
 })
-.then(function  ( mes2, massages, api ) {
+.then(function  ( api, mes2, massages ) {
     api( mes2 + 12);
 })
-.then(function  ( mes3, massages, api ) {
+.then(function  ( api, mes3, massages ) {
     api( mes3 + massages );
 });
 
@@ -117,7 +117,7 @@ var Chain = Reo.chain({
 });
 
 // 使用链式调用
-Chain.then(function(mes1){return mes1+3}).then(function(mes2,massages,api){api(mes2+12)}).then(function(mes3,massages,api){api(mes3+massages)});
+Chain.then(function(api,mes1){api(mes1+3)}).then(function(api,mes2,massages){api(mes2+12)}).then(function(api,mes3,massages){api(mes3+massages)});
 
 // 输出方法一
 Chain.next(); // 25
