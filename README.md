@@ -1,5 +1,5 @@
 # Reo.js
-这是一个原生的js库，封装的方法是基于js函数的扩展，不需要其他js插件功能，只要调用reojs库的方法就可以。由于是本月开始写reojs库，所以目前还在测试中，你可以阅读README.md阐述。reojs库感谢大家的支持，如果使用的过程出现了问题，可以交流讨论。
+这是一个原生的js库，封装的方法是基于js函数的扩展，不需要其他js插件功能，只要调用reojs库的方法就可以。本月开始写reojs库。reojs库感谢大家的支持，如果使用的过程出现了问题，可以交流讨论。
 
 ## update push
 推送第一个API方法：then(链式调用)。
@@ -105,6 +105,8 @@ fontAlgo.innerText = first + ',' + second + ',' + third;
 </script>
 ```
 
+为此，我还提供了自定义的调用方法，根据个人自定义名称，然后调用自定义名称输出`then`方法的内容，和上面的写法相同，差别在于调用的方法名改变了。方法之间相互调用不影响。
+
 类似写法如下：
 ```js
 <script>
@@ -115,15 +117,18 @@ var Chain = Reo.chain({
 });
 
 // 输出方法一
-Chain.next();
+Chain.next(); // 25
 
 // 输出方法二
-Chain.costom_module();
+Chain.costom_module(); // 25
+Chain.costom_module(); // 15
+Chain.costom_module(); // 20
 
 // 输出方法三(表示输出所有)
-Chain.all();
+Chain.all(); // 25,15,20 
 </script>
 ```
+
 
 ## License：
 Copyright (c) 2017-2025 koringz <ok234@foxmail.com> https://koringz.github.io
