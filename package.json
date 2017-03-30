@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "bower": "^1.8.0",
+    "grunt-contrib-nodeunit": "^1.0.0",
     "grunt-jscs": "^3.0.1"
   },
   "scripts": {

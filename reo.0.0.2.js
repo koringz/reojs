@@ -1,10 +1,12 @@
 (function(exports) {
 	var doc = exports.document || document,
-		vir = [],
-		mains = [],
-		convOrders = [],
+		coutARRAY = !coutARRAY ? [] : null,
+		vir = coutARRAY,
+		mains = coutARRAY,
+		orders = coutARRAY,
+		convOrders = coutARRAY,
 		arraySlice = ARRSLICE = Array.prototype.slice,
-		orders = [];
+		debug;
 
 	function blank() {};
 
@@ -260,7 +262,7 @@
 			options.call(this, log)
 		}
 	};
-	var debug = warn(function(options) {
+	debug = warn(function(options) {
 		window.console.warn(options)
 	}, 'disable write. call function err.');
 	if (typeof module !== 'undefined' && module.exports && window.module !== module) {
