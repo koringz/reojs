@@ -1,0 +1,32 @@
+{
+  "name": "reo.js",
+  "version": "1.0.0",
+  "description": "testing reo.js",
+  "main": "reo.0.0.2.js",
+  "dependencies": {
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "gruntfile": "^0.1.0"
+  },
+  "devDependencies": {
+    "bower": "^1.8.0"
+  },
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koringz/reo.js.git"
+  },
+  "author": "koringz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/koringz/reo.js/issues"
+  },
+  "homepage": "https://github.com/koringz/reo.js#readme"
+}

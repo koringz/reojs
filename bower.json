@@ -1,0 +1,24 @@
+{
+  "name": "reo.js",
+  "description": "testing reo.js",
+  "main": "reo.0.0.2.js",
+  "authors": [
+    "koringz"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/koringz/reo.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "^1.6.3",
+    "angular-resource": "^1.6.3",
+    "angular-route": "^1.6.3",
+    "bootstrap": "^3.3.7",
+    "grunt": "^1.0.1"
+  }
+}
