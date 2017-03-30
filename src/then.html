@@ -37,7 +37,7 @@
                     api( mes1 + 3 );
                 })
                 .then(function  ( api , mes2, massages ) {
-                    api( mes2 +  <span class="highlight">Number(fr.value)</span>  );
+                    api( mes2 +  <span class="highlight">Number(input.value)</span>  );
                 })
                 .then(function  ( api , mes3, massages ) {
                     api( mes3 + massages );
@@ -73,7 +73,7 @@
  <script src="./../reo.0.0.2.js"></script>
  <script>
 
-var fontAlgo = document.querySelector('.fontAlgo'), fr =  document.querySelector('.fr'), frlen = fr.value;
+var fontAlgo = document.querySelector('.fontAlgo'), input =  document.querySelector('input'), frlen = input.value;
 
 var REO = new Reo();
 
@@ -102,7 +102,7 @@ $('.btn').click(function  () {
         api( mes1 + 3 );
     })
     .then(function  (  api , mes2, massages ) {
-        api( mes2 + Number(fr.value) );
+        api( mes2 + Number(input.value) );
     })
     .then(function  (  api , mes3, massages ) {
         api( mes3 + massages );

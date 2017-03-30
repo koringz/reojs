@@ -15,11 +15,13 @@
   },
   "devDependencies": {
     "bower": "^1.8.0",
+    "grunt": "^1.0.1",
     "grunt-contrib-nodeunit": "^1.0.0",
-    "grunt-jscs": "^3.0.1"
+    "grunt-jscs": "^3.0.1",
+    "grunt-wiredep": "^3.0.1"
   },
   "scripts": {
-    "test": "start"
+    "start": "test"
   },
   "repository": {
     "type": "git",
