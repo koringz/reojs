@@ -18,7 +18,7 @@ Simple Call
 
 ## Documentation
 
--    在调用Reo API方法之前，需要实例一个Reojs库对象方便调用。
+ 在调用Reo API方法之前，需要实例一个Reojs库对象方便调用。
 ```js
 
 // 创建一个Reo对象
@@ -107,7 +107,7 @@ fontAlgo.innerText = first + ',' + second + ',' + third;
 </script>
 ```
 
-- 为此，我还提供了自定义的调用方法，根据个人自定义名称`costom_module`，然后调用自定义名称输出`then`方法的内容，和上面的写法相同，差别在于调用的方法名改变了。方法之间相互调用不影响。
+ 为此，我还提供了自定义的调用方法，根据个人自定义名称`costom_module`，然后调用自定义名称输出`then`方法的内容，和上面的写法相同，差别在于调用的方法名改变了。方法之间相互调用不影响。
 
 类似写法如下：
 ```js
@@ -135,7 +135,7 @@ Chain.all(); // 25,15,20
 ```
 ### extend()
 
-- 创建一个extend扩展方法，如：extend(new object, old object)。然后合并new和old对象，最后输出一个新的对象集。
+创建一个extend扩展方法，如：extend(new object, old object)。然后合并new和old对象，最后输出一个新的对象集。
 
 ```js
 <script>
