@@ -11,8 +11,9 @@ Simple Call
 
 ## API
 
-- `hook` 钩子调用机制，只要调用hook()方法，就能调用原型链的对象或方法，还可传递参数。
-- `chain` 链式调用机制，通过chain()入口传递参数，然后用then实现链式调用。
+- `hook` 钩子调用机制，只要调用.hook()方法，就能调用原型链的对象或方法，还可传递参数。
+- `chain` 链式调用机制，通过.chain()入口传递参数，然后用then实现链式调用。
+- `extend` 对象的扩展方法， 向extend方法内传入2个参数.extend(new object, old object)来实现扩展的功能。
 - 超多Reo.js方法正在赶往的途中...
 
 ## Documentation
@@ -24,7 +25,7 @@ Simple Call
 var Reo = new Reo();
 
 ```
-### hook
+### hook method
   通过`hook`钩子的调用机制，能够轻松的帮你调用到构造模块，注意：这个模块是自定义的构造函数，比如：`var static = function () {}`或者`function static () {}`。接着获取模块的原型链对象，原型链的写法主要参照原生JavaScript写法。最后我们可以向原型链的方法里面传递参数。
 如果调用一个模块module时，没有手动定义`then()`方法，就会失去调用模块的原型链对象，所以，在调用模块时，一定要有then方法。
 
@@ -64,7 +65,7 @@ own_then.success( msg1, test01, msg2);
 // return: 6 
 </script>
 ```
-### chain
+### chain method
 
   在调用`chain()`方法时，方法内部只接收一个对象{...}。此对象内部默认属性为可读、可写，布尔值为true。对象的属性val值是一个数组，对象的module属性值是一个调用的模块名称。
   
@@ -131,7 +132,18 @@ Chain.costom_module(); // 20
 Chain.all(); // 25,15,20 
 </script>
 ```
+### extend method
 
+创建一个extend扩展方法，extend(new object, old object)合并new和old产生一个新的对象集。
+
+```js
+<script>
+
+REO.extend({c:'3'},{a:'1',b:'2'});
+// return => {c:'3',a:'1',b:'2'}
+
+</script>
+```
 
 ## License：
 Copyright (c) 2017-2025 koringz <ok234@foxmail.com> https://koringz.github.io
