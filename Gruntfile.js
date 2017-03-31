@@ -9,8 +9,8 @@ module.exports = function(grunt) {
         separetor :';'
       },
       dist : {
-        src : ['app/src/**.js'],
-        dest : 'app/build/<%= pkg.name %>.js'
+        src : ['src/**.js'],
+        dest : 'dest/<%= pkg.name %>'
       },
   };
 

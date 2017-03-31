@@ -134,7 +134,7 @@ Chain.all(); // 25,15,20
 ```
 ### extend method
 
-创建一个extend扩展方法，extend(new object, old object)合并new和old产生一个新的对象集。
+创建一个extend扩展方法，如：extend(new object, old object)。然后合并new和old对象，最后输出一个新的对象集。
 
 ```js
 <script>
