@@ -1,17 +1,17 @@
 module.exports = function(grunt) {
 
-  //package.json文件  
-  var definePKg = grunt.file.readJSON('package.json'); 
+  // var custom_directive = {
+  //     src : 'dist/',
+  //     dest : 'dest/<% pkg.pattern.test %>'
+  // };
 
-  //concat合并js文件  
+  //concat合并js文件
   var defineConcat = {
-      options : {
-        separetor :';'
-      },
-      dist : {
-        src : ['src/**.js'],
-        dest : 'dest/<%= pkg.name %>'
-      },
+      basic_and_extras : {
+        files : {
+            "dest/<%= pkg.pattern.test %>/<%= pkg.pattern.test %>.js" : "dist/**.js",
+        }
+      }
   };
 
   // 压缩文件，左边为输出压缩文件，右边为需要压缩的文件
@@ -20,11 +20,11 @@ module.exports = function(grunt) {
     my_target : {
         options : {
           mangle : {
-            execpt : ['']
+            execpt : ['jquery']
           }
         },
         files : {
-          'dest/**.js' : ['dist/**.js'],
+          'dest/all.js' : ['lib/**.js'],
         }
     }
 
@@ -47,28 +47,20 @@ module.exports = function(grunt) {
   // 监听文件变化
   var defineWatch = {
       scripts :{
-        files: ['lib/*.js'],
+        files: ['lib/*.js','src/*.js'],
         tasks: ['jshint'],
         options: {
           spawn: false,
           livereload: 0123
         },
       },
-      css : {
-        files : ['assets/**.css'],
-        tasks : ['css'],
-        options:{
-          livereload : 1234
-        }
-      },
       html : {
         files :['src/**.html'],
         options:{
-          livereload : 2345
         }
       },
       jshint : {
-        files : ['assets/**.js']
+        files : ['Gruntfile.js']
       }
   };
 
@@ -92,11 +84,45 @@ module.exports = function(grunt) {
       }
   };
 
+
+  // babel编译js文件
+  var defineBable = {
+      options: {
+          sourceMap: true,
+          presets: ['babel-preset-es2015']
+      },
+      dist: {
+          files: {
+              'dest/babeles/es.common.js': 'components/es.common.js'
+          }
+      }
+     
+  };
+
+
+  // webpack
+  var defineWebpack = {
+      components: {
+        entry: './components/handlereomethods/validMethod.js',  // This is js components path.
+        output: {
+          filename: './lib/handlereomethods/validMethod.js'  // Save to lib handle path.
+        }
+      },
+      runtime: {
+        entry: './components/handlereomethods/validMethod.js',  // This is js components path.
+        output: {
+          filename: './lib/handlereomethods/validMethod.runtime.js'  // Save a time to lib handle path.
+        }
+      }
+  };
+
   grunt.initConfig({
 
-    pkg: definePKg,
+    pkg: grunt.file.readJSON('package.json'),
 
     concat: defineConcat,
+
+    babel : defineBable,
 
     uglify: defineUglify,
 
@@ -106,18 +132,22 @@ module.exports = function(grunt) {
        
     connect: defineConnect,
 
+    webpack: defineWebpack,
+
     watch : defineWatch
 
   });
   
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-babel');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-webpack');
   grunt.loadNpmTasks('grunt-wiredep');
   grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.registerTask('start', ['concat','uglify','jshint','wiredep','watch','connect']);
-  grunt.registerTask('default', ['start']);
+
+  grunt.registerTask('start', ['concat','babel','uglify','jshint','wiredep','watch','connect']);
 };
 
 

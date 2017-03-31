@@ -14,6 +14,7 @@ Simple Call
 - `hook` 钩子调用机制，只要调用.hook()方法，就能调用原型链的对象或方法，还可传递参数。
 - `chain` 链式调用机制，通过.chain()入口传递参数，然后用then实现链式调用。
 - `extend` 对象的扩展方法， 向extend方法内传入2个参数.extend(new object, old object)来实现扩展的功能。
+- `indexof` 数组的索引，在一个数组内查找指定的数，比如：.indexof(Array, num)，如果数组内部存在num返回1，否则返回-1。
 - 超多Reo.js方法正在赶往的途中...
 
 ## Documentation
