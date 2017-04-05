@@ -1,4 +1,6 @@
 import reoinit from "./reo.init";
+import reowarn from "./reo.warn";
+
 
 let 
     blank = reoinit.blank,
@@ -12,7 +14,6 @@ let
     indexof = reoinit.indexof,
     extend = reoinit.extend;
 
-
 let doc = window.document || document,
     coutARRAY = !coutARRAY ? [] : null,
     vir = coutARRAY,
@@ -24,8 +25,6 @@ let doc = window.document || document,
     debug, hookModel = [];
 
 function order(element, options) {
-
-
 
     this._element = element;
     this._content = options;
@@ -83,7 +82,27 @@ order.prototype = {
                 [options = (options === undefined) - 1, options ? 0 : options = f];
                 return options[options ? 0 : 1]
             })(options ? 0 : arguments);
-            
+            if (isObj(options)) {
+                var getOutside = extend(this.acceptCallInherit.initailizationStatus, options);
+                if (this.acceptCallInherit.initailizationStatus.readable && this.acceptCallInherit.initailizationStatus.enable && !this.acceptCallInherit.initailizationStatus.writable && !getOutside.writable) {
+                    this.set(options);
+                    this.rebuild();
+                    var firstInherits = this['acceptCallInherit'],
+                        getStatus = firstInherits.initailizationStatus;
+                    if (isObj(getStatus)) {
+                        firstInherits.acceptinfo = getStatus.val || getStatus['text']
+                    }
+                    this.recieving();
+                    getStatus = null;
+                    firstInherits = null;
+                    orders.push(this)
+                } else {
+                    this.debug()
+                }
+            } else {
+                this.debug()
+            }
+            return this
         },
         rebuild: function() {
             return this.group(function(previousScope, attr) {
@@ -115,7 +134,7 @@ order.prototype = {
         defineInvoking: function() {
             var customInvokingModel = this.acceptCallInherit.initailizationStatus.module;
             this.userModel[customInvokingModel] = this.next;
-            for (prop in this.userModel) {
+            for (let prop in this.userModel) {
                 if (this.userModel.hasOwnProperty(prop) && !this.hasOwnProperty(prop)) {
                     this[prop] = this.userModel[customInvokingModel]
                 }
@@ -216,7 +235,7 @@ order.prototype = {
                 this.thenCallInherit.backUpStorage = []
             }
         },
-        debug: debug,
+        debug: reowarn,
         extend: extend,
         indexof: indexof
     };

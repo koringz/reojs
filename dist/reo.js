@@ -1,9 +1,9 @@
 import order_model from "./reo.order";
 
-function REO(element, options) {
+function reo(element, options) {
         this.options = new order_model(element, options) || {};
         return this.options
     };
 
-window.REO = REO;
+window.reo = reo;
 

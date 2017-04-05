@@ -1,68 +1,52 @@
- body,html{
-    margin: 0;
-    padding: 0;
-    background-color: #ddd
-}
-div{
-    padding: 2px;
-}
-div:first-child{
-    padding: 30px 50px ;
-    background-color: #eee;
-}
-div:not(:first-child):nth-of-type(2n+1){
-    /*padding: 0px 10px;*/
-    background-color: #ccc;
-    color: #666;
+.api-js{
+    font-size: 14px;
 }
 
-li{
-    display: block;
-    width: auto;
-    margin-top: 3px;
-    padding-left: 6px;
-    background-color: #efefef;
-    color: #111;
-    list-style: none;
+/* clear box -- position right */
+.test03{
+    float: right;
 }
-li:nth-of-type(2n){
-    background-color: #f2f2f2;
+.middle{
+    text-align: center;
 }
-input{
-    padding: 5px 8px;
-    font-size: 15px;
-    background-color: #fff;
-    color: #333;
+.top-shadow{
+    box-shadow: 0px 3px 5px #2f3
 }
-
-/*code*/
-code{
-    font-size: 16px;
-    color: #217C7E
+.coding-shadow{
+    box-shadow: 0px 3px 5px #aaa
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.top.bottom-position{
+    padding-bottom: 50px;
+}
+.chainimg{
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    line-height: 1px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 2px solid yellow;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 /*high*/
-.highlight{
-    color: #0366DD;
-}
-.gray{
-    color: #111;
-    font-size: 16px;
-     font-family:"Microsoft YaHei",Arial,Helvetica,sans-serif,"SimSun"; 
-     font-weight: 500;
-}
-
 .litter-box {
     content: "";
     padding: 8px 5px;
     /*background-color: #F6F8FA*/
 }
-
-.box{
+.coding-box{
     padding-left: 30px;
-    background-color: #ccc;
+    background-color: #ddd;
+    font-size: 12px;
 }
-
 .table-box{
     float: right;
 
@@ -75,16 +59,27 @@ code{
     overflow: hidden;
 }
 
-@media(max-width: 767px) {
-    .box,.container .top{
-        padding: 0;
-        width: 100%;
-        border: none;
-     }
-     div{
-        overflow: hidden;
-     }
-     code{
-        overflow: scroll;
-     }
+
+/* button get resource */
+.btn-box{
+    padding: 8px 5px;
 }
+
+
+
+/************ header **************/
+.header{
+    margin: -30px -50px;
+    padding: 30px 50px;
+}
+
+
+
+/************* footer *************/
+.footer{
+    border-top: 1px solid #ccc
+}
+
+
+
+

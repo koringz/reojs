@@ -1,0 +1,29 @@
+.highlight{
+    color: #0366DD;
+}
+.gray{
+    color: #111;
+    font-size: 16px;
+    font-family:"Microsoft YaHei",Arial,Helvetica,sans-serif,"SimSun"; 
+    font-weight: 500;
+}
+.cdn-bgcolor{
+	background-color : #86B404
+}
+.top.cdn-bgcolor{
+	background-color : #E1F5A9
+}
+.btn-box{
+	background-color: lightgray
+}
+.btn-box:hover{
+	background-color: gray;
+}
+.btn-box a{
+	margin: -8px -5px;
+	padding: 8px 5px;
+	color: #333;
+}
+.btn-box a:hover{
+	color: #fff;
+}

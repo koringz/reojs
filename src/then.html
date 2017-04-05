@@ -1,0 +1,132 @@
+<html>  
+<head>  
+    <meta charset='utf-8'>
+    <title>REO.JS</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <link rel="stylesheet" type="text/css" href="./../assets/package-without-hookcss.reset.css">
+    <link rel="stylesheet" type="text/css" href="./../assets/package-without-hookcss.css">
+    <link rel="stylesheet" type="text/css" href="./../assets/package-without-hookcss.skin.css">
+    <link rel="stylesheet" type="text/css" href="./../assets/package-without-hookcss.media.css">
+</head>  
+<body>
+
+    <!-- top title-->
+    <div class="main">
+        <header class="header cdn-bgcolor">
+            <h1>Reo.js <span class="api-js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;api: then()&gt;</span></h1>
+        </header>
+    </div>
+    <!-- top end-->
+
+    <!-- middle first-->
+    <div class="container">
+        <div class="top cdn-bgcolor">
+            <section>
+                <center>
+                    https://koringz.github.io/reojs/reo.0.0.2.min.js
+                </center>
+            </section>
+        </div>
+    </div>
+    <!-- middle end -->
+
+    <!-- middle second-->
+    <div class="container">
+        <div class="top">
+            <code class="test02 gray">
+                <em>js:</em>
+                <pre class="coding-box coding-shadow">
+                    
+    <span>var REO = new <b>REO</b>();
+    </span>
+    <span>var Chain = REO.<b>chain</b>({
+        module : '<span class="highlight">user_next</span>',
+        val: [22,3,5]  // mes1 = 22 ,mes2 = 3, mes3 = 5
+    });</span>
+    <span>
+    var getvalue = 
+    Chain
+    .<b>then</b>(function ( api, mes1 ) {
+        api( mes1 + 3 );
+    })
+    .<b>then</b>(function  ( api , mes2, massages ) {
+        api( mes2 +  <span class="highlight">Number(input.value)</span>  );
+    })
+    .<b>then</b>(function  ( api , mes3, massages ) {
+        api( mes3 + massages );
+    });
+    </span>
+    <span>method zone:</span>
+    <span>var getAll = getvalue.<span class="highlight">all</span>();  // => 25,15,20
+    <span>method one:</span>
+    var getNext = getvalue.<span class="highlight">next</span>();  // => 25
+    <span>method two:</span>
+    var get_user_next = getvalue.<span class="highlight">user_next</span>();  // => 25</span>
+    
+                </pre>
+            </code>
+        </div>
+    </div>
+    <!-- middle end -->
+
+    <!-- middle third-->
+    <div class="container">
+        <div class="top bottom-position">
+            Return value : <code class="fontAlgo highlight fw clock"></code> 
+            <span class="table-box"> &nbsp;&nbsp;<button class="btn-box"><a href="https://github.com/koringz/reo.js/tree/master/lib">git resource</a></button></span>
+        </div>
+    </div>
+    <!-- middle end -->
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="top">
+            <footer>
+                <p>
+                    <span class="fl">Team groups：
+                        <a href="https://github.com/koringz">
+                            <img class="chainimg" src="https://avatars1.githubusercontent.com/u/13350327?v=3&u=b3d28b6c862dd951e2e946f385975b33cdb04cf5&s=400">
+                        </a> 
+                    </span>
+                    <span class="fr">Author：koringz</span></p>
+            </footer>
+        </div>
+    </div>
+    <!-- footer end -->
+
+    <!-- bower:js -->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/angular-resource/angular-resource.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbower -->
+
+</body>
+    <script src="./../dest/dist/runtime/reo.js"></script>
+    <script>
+
+    var fontAlgo = document.querySelector('.fontAlgo');
+
+    var REO = new REO();
+
+    var Chain = REO.chain({
+        module : 'user_next',
+        val: [22,3,5] // mes1 = 2 ,mes2 = 3, mes3 = 5
+    });
+
+    var getvalue = Chain.then(function ( api, mes1 ) {
+        api( mes1 + 3 );
+    })
+    .then(function  (  api , mes2, massages ) {
+        api( mes2 + 12 );
+    })
+    .then(function  (  api , mes3, massages ) {
+        api( mes3 + massages );
+    });
+    var getAll = getvalue.all();
+
+    fontAlgo.innerText = getAll ;
+    </script>
+</html>

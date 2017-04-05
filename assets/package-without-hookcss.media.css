@@ -1,0 +1,16 @@
+
+/* controll media */
+@media(max-width: 767px) {
+    .box,
+    .container .top{
+        padding: 0;
+        width: 100%;
+        border: none;
+     }
+     div{
+        overflow: hidden;
+     }
+     code{
+        overflow: scroll;
+     }
+}
