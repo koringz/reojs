@@ -9,7 +9,7 @@ static.prototype.success = function  (a,b) {
 }
 ```
 
-<a name="hook" href="#hook">&lg;</a> reo.<b>hook</b>(object)
+<a name="hook" href="#hook">#</a> reo.<b>hook</b>(object)
 
 如果调用一个模块module时，没有手动定义`then()`方法，就会失去调用模块的原型链对象，所以，在调用模块时，一定要有then方法。
 多次调用模块的时候，为了不改变模块内部`this`指针，你需要自定义`hook`方法。自定义方法如：`var hook = Reo.hook()`。
@@ -19,7 +19,7 @@ var hook = reo.hook({
     val : 3 
 });
 ```
-<a name="then" href="#then">&lg;</a> hook.<b>then</b>(fn())
+<a name="then" href="#then">#</a> hook.<b>then</b>(fn())
 
 通过自定义hook钩子，通过then传入参数到模块里面。
 ```js
@@ -30,7 +30,7 @@ var own_then = hook.then(function ( msg ) {
 });
 ```js
 
-<a name="on" href="#on">&lg;</a> own_then.<b>on</b>(params,fn())
+<a name="on" href="#on">#</a> own_then.<b>on</b>(params,fn())
 
 获取then返回的参数，通过on方法调用success模块，然后把参数传入到success模块里面。
 ```js
