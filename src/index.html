@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="./../assets/package-without-hookcss.css">
 </head>  
 <body>
-
     <!-- bower:js -->
     <script src="../bower_components/angular/angular.js"></script>
     <script src="../bower_components/angular-animate/angular-animate.js"></script>
@@ -16,6 +15,11 @@
     <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <!-- endbower -->
 </body>
-    <script src="./../dest/dist/runtime/test.results.js"></script>
-    <script src="./../dest/dist/runtime/reo.init.js"></script>
+    <script src="./../dest/dist/runtime/reo.js"></script>
+    <script>
+
+    var getreo = new REO();
+    console.log(getreo);
+
+    </script>
 </html>

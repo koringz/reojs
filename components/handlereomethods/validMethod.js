@@ -1,4 +1,4 @@
-import { HandlebarsEnvironment } from './human';
+import { HandlebarsEnvironment } from './valid';
 import logger from './defaultTest';
 
 let _void = {};
@@ -15,8 +15,4 @@ function create () {
 let params = new create();
 
 console.log(params.a);
-
-
-console.log(logger.methodBare);
-console.log(logger.map);
 

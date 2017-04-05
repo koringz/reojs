@@ -1,22 +1,16 @@
 module.exports = function(grunt) {
 
-  // var custom_directive = {
-  //     src : 'dist/',
-  //     dest : 'dest/<% pkg.pattern.test %>'
-  // };
-
   //concat合并js文件
   var defineConcat = {
       basic_and_extras : {
         files : {
-            "dest/<%= pkg.pattern.test %>/<%= pkg.pattern.test %>.js" : "dist/**.js",
+            "dest/<%= pkg.pattern.test %>/<%= pkg.pattern.test %>.grunt.js" : "dist/test.grunt.js",
         }
       }
   };
 
   // 压缩文件，左边为输出压缩文件，右边为需要压缩的文件
   var defineUglify = {
-    
     my_target : {
         options : {
           mangle : {
@@ -24,9 +18,44 @@ module.exports = function(grunt) {
           }
         },
         files : {
-          'dest/all.js' : ['lib/**.js'],
+          // 'dest/all.js' : ['lib/**.js'],
         }
     }
+  };
+  
+  // babel编译es6的代码风格转换为es5的代码风格, because of the browser supports es5 compiler.
+  var defineBable = {
+      options: {
+          sourceMap: true,
+          presets: ['babel-preset-es2015']
+      },
+      files: {
+          expand : true,
+          src: "./dist/!(index).js",
+          dest: "./dest/"
+      }
+  };
+
+  // webpack提供require模块和common模块的js管理调用风格
+  var defineWebpack = {
+      components: {
+        entry: './components/handlereomethods/validMethod.js',  // This is js components path.
+        output: {
+          filename: './dest/handlereomethods/validMethod.js'  // Save to lib handle path.
+        }
+      },
+      test : {
+        entry : './dest/dist/test.results.js',
+        output : {
+          filename : './dest/dist/runtime/test.results.js'
+        }
+      },
+      reo : {
+        entry : './dest/dist/reo.js',
+        output : {
+          filename : './dest/dist/runtime/reo.js'
+        }
+      },
 
   };
 
@@ -40,15 +69,15 @@ module.exports = function(grunt) {
         globals: {
           jQuery: true
         }
-     },
+      },
      files : ['Gruntfile.js', '/src/**/*.js'],
   };
 
   // 监听文件变化
   var defineWatch = {
       scripts :{
-        files: ['lib/*.js','src/*.js'],
-        tasks: ['jshint'],
+        files: ['lib/*.js','components/**/**.js','dist/**/**.js'],
+        tasks: ['jshint','babel','webpack'],
         options: {
           spawn: false,
           livereload: 0123
@@ -85,37 +114,6 @@ module.exports = function(grunt) {
   };
 
 
-  // babel编译js文件
-  var defineBable = {
-      options: {
-          sourceMap: true,
-          presets: ['babel-preset-es2015']
-      },
-      dist: {
-          files: {
-              'dest/babeles/es.common.js': 'components/es.common.js'
-          }
-      }
-     
-  };
-
-
-  // webpack
-  var defineWebpack = {
-      components: {
-        entry: './components/handlereomethods/validMethod.js',  // This is js components path.
-        output: {
-          filename: './lib/handlereomethods/validMethod.js'  // Save to lib handle path.
-        }
-      },
-      runtime: {
-        entry: './components/handlereomethods/validMethod.js',  // This is js components path.
-        output: {
-          filename: './lib/handlereomethods/validMethod.runtime.js'  // Save a time to lib handle path.
-        }
-      }
-  };
-
   grunt.initConfig({
 
     pkg: grunt.file.readJSON('package.json'),
@@ -147,7 +145,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-wiredep');
   grunt.loadNpmTasks('grunt-contrib-connect');
 
-  grunt.registerTask('start', ['concat','babel','uglify','jshint','wiredep','watch','connect']);
+  grunt.registerTask('start', ['concat','babel','uglify','jshint','wiredep','webpack','watch','connect']);
 };
 
 
