@@ -28,7 +28,7 @@ var own_then = hook.then(function ( msg ) {
 },function ( msg ) {
     return msg + 5;  //  8
 });
-```js
+```
 
 <a name="on" href="#on">#</a> own_then.<b>on</b>(params,fn())
 
