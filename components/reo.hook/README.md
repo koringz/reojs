@@ -4,8 +4,8 @@
 创建一个组织构造模块，原型链的写法主要参照原生JavaScript写法，方便钩子调用此模块的原型链对象。注意：这个模块是自定义的构造函数，如下:
 ```js
 function static () {};
-static.prototype.success = function (a,b) {
-    return b === a;
+static.prototype.success = function (a) {
+    return a;
 }
 ```
 
@@ -34,7 +34,7 @@ var own_then = hook.then(function ( msg ) {
 
 获取then返回的参数，通过on方法调用success模块，然后把参数传入到success模块里面。
 ```js
-own_then.on('success', function (api, msg1, msg2){
-	api(msg1, msg2);
+own_then.on('success', function (api, msg){
+	api(msg);
 });
 ```
