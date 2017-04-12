@@ -1,56 +1,40 @@
-# chain
+# hook()
+Through `hook` hook of call mechanism, can easy help you call to the construction module.
 
-在调用`chain()`方法时，方法内部只接收一个对象{...}。此对象内部默认属性为可读、可写，布尔值为true。对象的属性val值是一个数组，对象的module属性值是一个调用的模块名称。
-
-<a name="chain" href="#chain">#</a> reo.<b>chain</b>(object)
-
-创建一个chain链式方法。
+Create an organizational structure module, the prototype of the original writing method with reference to the original JavaScript written to facilitate the hook call this module prototype chain object. Note: This module is a custom constructor, as follows:
 ```js
-var Chain = reo.chain({
-    module : 'costom_module',
-    val: [22,3,5] // mes1 = 22 ,mes2 = 3, mes3 = 5
+function static () {};
+static.prototype.success = function (a,b) {
+    return b === a;
+}
+```
+
+<a name="hook" href="#hook">#</a> reo.<b>hook</b>(object)
+
+If you call a module module, there is no manual definition of the `then ()` method, it will lose the module to call the prototype chain object, so when calling the module, there must be the method.
+Repeatedly call the module, in order not to change the module within the `this` pointer, you need to customize the `hook` method. The customization method is as follows:
+```js
+var hook = reo.hook({
+    module : 'static', 
+    val : 3 
 });
 ```
-<a name="then" href="#then">#</a> chain.<b>then</b>(fn(api,msg,total))
+<a name="then" href="#then">#</a> hook.<b>then</b>(fn())
 
-当调用`then()`方法时，会依次从val数组获得参数，并且`then()`内部的第一个参数为必填项。第二个参数message非必填，但是message必须从第二个`then()`方法开始记录。因为message只捕捉上一个`then()`的输出值。然后，第三个参数是`api()`方法，主要是回调作用，`api(...)`括号里面的参数将会被输出。
-
+Customize the hook hook, then pass the parameters into the module.
 ```js
-Chain.then(function ( api, mes1 ) {
-    api( mes1 + 3 );
-})
-.then(function  ( api, mes2, massages ) {
-    api( mes2 + 12);
-})
-.then(function  ( api, mes3, massages ) {
-    api( mes3 + massages );
+var own_then = hook.then(function ( msg ) {
+    return msg + 3;  //  6
+},function ( msg ) {
+    return msg + 5;  //  8
 });
 ```
 
-<a name="next" href="#next">#</a> chain.<b>next</b>()
+<a name="on" href="#on">#</a> own_then.<b>on</b>(params,fn())
 
-最后，调用`next`方法，`next`为默认调用方法，输出链式的结果，依次执行输出链式的结果。 
-
+Get the return of the parameters, through the on method call success module, and then pass the parameters into the success module inside.
 ```js
-var first = Chain.next(), // 25
-    second = Chain.next(), // 15
-    third = Chain.next(); // 20
-```
-
-<a name="all" href="#all">#</a> chain.<b>all</b>()
-
-`all`为一次性调用输出所有，依次输出`then`方法。
-
-```js
-Chain.all(); // 25,15,20 
-```
-
-<a name="costom_module" href="#costom_module">#</a> chain.<b>costom_module</b>()
-
-`costom_module`自定义模块和next一样，根据个人自定义名称`costom_module`，依次调用`then`方法。
-
-```js
-Chain.costom_module(); // 25
-Chain.costom_module(); // 15
-Chain.costom_module(); // 20
+own_then.on('success', function (api, msg1, msg2){
+	api(msg1, msg2);
+});
 ```

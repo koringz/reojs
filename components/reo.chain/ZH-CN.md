@@ -4,7 +4,7 @@
 
 <a name="chain" href="#chain">#</a> reo.<b>chain</b>(object)
 
-Create a chained chain method.
+创建一个chain链式方法。
 ```js
 var Chain = reo.chain({
     module : 'costom_module',
@@ -13,7 +13,7 @@ var Chain = reo.chain({
 ```
 <a name="then" href="#then">#</a> chain.<b>then</b>(fn(api,msg,total))
 
-When the `then ()` method is called, the argument is obtained from the val array in turn, and the first argument in `then ()` is required. The second parameter message is not required, but the message must start from the second `then ()` method. Because the message only captures the output value of a `then ()`. Then, the third argument is the `api ()` method, which is primarily a callback, and the `api (...)` parentheses will be output.
+当调用`then()`方法时，会依次从val数组获得参数，并且`then()`内部的第一个参数为必填项。第二个参数message非必填，但是message必须从第二个`then()`方法开始记录。因为message只捕捉上一个`then()`的输出值。然后，第三个参数是`api()`方法，主要是回调作用，`api(...)`括号里面的参数将会被输出。
 
 ```js
 Chain.then(function ( api, mes1 ) {
@@ -29,7 +29,7 @@ Chain.then(function ( api, mes1 ) {
 
 <a name="next" href="#next">#</a> chain.<b>next</b>()
 
-Finally, call the `next` method,` next` as the default method is called the chain of output results, followed by the implementation of the results of the output chain.
+最后，调用`next`方法，`next`为默认调用方法，输出链式的结果，依次执行输出链式的结果。 
 
 ```js
 var first = Chain.next(), // 25
@@ -39,7 +39,7 @@ var first = Chain.next(), // 25
 
 <a name="all" href="#all">#</a> chain.<b>all</b>()
 
-`All` output all for a one-time call, and then output the` then` method.
+`all`为一次性调用输出所有，依次输出`then`方法。
 
 ```js
 Chain.all(); // 25,15,20 
@@ -47,7 +47,7 @@ Chain.all(); // 25,15,20
 
 <a name="costom_module" href="#costom_module">#</a> chain.<b>costom_module</b>()
 
-`The costom_module` custom module and next, according to the individual custom name` costom_module`, in turn call the `then` method.
+`costom_module`自定义模块和next一样，根据个人自定义名称`costom_module`，依次调用`then`方法。
 
 ```js
 Chain.costom_module(); // 25

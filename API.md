@@ -1,23 +1,23 @@
 # REO API release
 
-这是一个reojs API 方法。
+This is an API method reo.js library.
 
 * [Chain](#chain-reo-chain)
 
 * [Hook](#hook-reo-hook)
 
-reo方法在路上...
+REO method on the road...
 
 
-## [Chain (reo-chain)](https://github.com/koringz/reo.js/tree/master/components/reo.chain/ZH-CN.md)
-链式调用方法
-* [reo.chain](https://github.com/koringz/reo.js/tree/master/components/reo.chain/ZH-CN.md#chain) - create a method chain.
-* [*chain*.then](https://github.com/koringz/reo.js/tree/master/components/reo.chain/ZH-CN.md#then) - resize chain convertion then method.
-* [*then*.next](https://github.com/koringz/reo.js/tree/master/components/reo.chain/ZH-CN.md#next) - get then orders.
-* [*then*.all](https://github.com/koringz/reo.js/tree/master/components/reo.chain/ZH-CN.md#all) - get all orders.
+## [Chain (reo-chain)](https://github.com/koringz/reo.js/tree/master/components/reo.chain/README.md)
+Use chain invoker Method.
+* [reo.chain](https://github.com/koringz/reo.js/tree/master/components/reo.chain/README.md#chain) - create a method chain.
+* [*chain*.then](https://github.com/koringz/reo.js/tree/master/components/reo.chain/README.md#then) - resize chain convertion then method.
+* [*then*.next](https://github.com/koringz/reo.js/tree/master/components/reo.chain/README.md#next) - get then orders.
+* [*then*.all](https://github.com/koringz/reo.js/tree/master/components/reo.chain/README.md#all) - get all orders.
 
-## [Hook (reo-hook)](https://github.com/koringz/reo.js/tree/master/components/reo.hook/ZH-CN.md)
-使用钩子调用方法
-* [reo.hook](https://github.com/koringz/reo.js/tree/master/components/reo.hook/ZH-CN.md#hook)  - create a method hook.
-* [*hook*.then](https://github.com/koringz/reo.js/tree/master/components/reo.hook/ZH-CN.md#then)  - resize hook invoking then.
-* [*hook*.on](https://github.com/koringz/reo.js/tree/master/components/reo.hook/ZH-CN.md#on)  - get a module.
+## [Hook (reo-hook)](https://github.com/koringz/reo.js/tree/master/components/reo.hook/README.md)
+Use hook invoker Method.
+* [reo.hook](https://github.com/koringz/reo.js/tree/master/components/reo.hook/README.md#hook)  - create a method hook.
+* [*hook*.then](https://github.com/koringz/reo.js/tree/master/components/reo.hook/README.md#then)  - resize hook invoking then.
+* [*hook*.on](https://github.com/koringz/reo.js/tree/master/components/reo.hook/README.md#on)  - get a module.

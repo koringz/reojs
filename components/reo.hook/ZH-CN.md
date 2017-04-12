@@ -1,7 +1,7 @@
 # hook()
-Through `hook` hook of call mechanism, can easy help you call to the construction module.
+通过`hook`钩子的调用机制，能够轻松的帮你调用到构造模块。
 
-Create an organizational structure module, the prototype of the original writing method with reference to the original JavaScript written to facilitate the hook call this module prototype chain object. Note: This module is a custom constructor, as follows:
+创建一个组织构造模块，原型链的写法主要参照原生JavaScript写法，方便钩子调用此模块的原型链对象。注意：这个模块是自定义的构造函数，如下:
 ```js
 function static () {};
 static.prototype.success = function (a,b) {
@@ -11,8 +11,8 @@ static.prototype.success = function (a,b) {
 
 <a name="hook" href="#hook">#</a> reo.<b>hook</b>(object)
 
-If you call a module module, there is no manual definition of the `then ()` method, it will lose the module to call the prototype chain object, so when calling the module, there must be the method.
-Repeatedly call the module, in order not to change the module within the `this` pointer, you need to customize the `hook` method. The customization method is as follows:
+如果调用一个模块module时，没有手动定义`then()`方法，就会失去调用模块的原型链对象，所以，在调用模块时，一定要有then方法。
+多次调用模块的时候，为了不改变模块内部`this`指针，你需要自定义`hook`方法。自定义方法如下：
 ```js
 var hook = reo.hook({
     module : 'static', 
@@ -21,7 +21,7 @@ var hook = reo.hook({
 ```
 <a name="then" href="#then">#</a> hook.<b>then</b>(fn())
 
-Customize the hook hook, then pass the parameters into the module.
+自定义hook钩子，通过then传入参数到模块里面。
 ```js
 var own_then = hook.then(function ( msg ) {
     return msg + 3;  //  6
@@ -32,7 +32,7 @@ var own_then = hook.then(function ( msg ) {
 
 <a name="on" href="#on">#</a> own_then.<b>on</b>(params,fn())
 
-Get the return of the parameters, through the on method call success module, and then pass the parameters into the success module inside.
+获取then返回的参数，通过on方法调用success模块，然后把参数传入到success模块里面。
 ```js
 own_then.on('success', function (api, msg1, msg2){
 	api(msg1, msg2);
