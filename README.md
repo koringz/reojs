@@ -1,8 +1,9 @@
 # Reo.js
-这是一个原生的js库，封装的方法是基于js函数的扩展，不需要其他js插件功能，只需调用reojs库的方法就可以。2017年3月开始写reojs库。reojs库感谢大家的支持，如果使用的过程出现了问题，可以交流讨论。
+This is a native js library, the package method is base on the expension of js function, do not need other js plug-in function, just call reojs library method can be, march 2017 begin to write reojs library. reojs thank your for your supports, if the use of there is a problem, you can exchange discussion. 
 
 ## Resources
 - [API Methods](https://github.com/koringz/reo.js/blob/master/API.md)
+- [中文文档](https://github.com/koringz/reo.js/blob/master/ZH-CN.md)
 
 ## Idea
 Fast Visibale
@@ -10,16 +11,16 @@ Fast Visibale
 Simple Call
 
 ## Installing
-如果你想要支持reojs库方法，下载以下最新reojs库。由于不支持npm下载，所以目前只能通过加载链接调用reojs库:
+if you want to supports the reojs library method, dowhnload this latest reojs library. because now do not support npm download, so only you  through the load link call reojs library. 
 ```js
 <script src="https://koringz.github.io/reojs/reo.0.0.2.js"></script>
 ```
-如果想要压缩版本:
+if you want to compress the version:
 ```js
 <script src="https://koringz.github.io/reojs/reo.0.0.2.min.js"></script>
 ```
 ## Documentation
- 在调用Reo API方法之前，需要实例一个reojs库对象方便调用。
+Before call reo api method, You need an instance of reojs library to call. 
 ```js
 var reo = new reo();
 ```
