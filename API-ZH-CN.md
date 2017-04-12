@@ -11,13 +11,13 @@ reo方法在路上...
 
 ## [Chain (reo-chain)](https://github.com/koringz/reo.js/tree/master/components/reo.chain/ZH-CN.md)
 链式调用方法
-* [reo.chain](https://github.com/koringz/reo.js/tree/master/components/reo.chain/ZH-CN.md#chain) - create a method chain.
-* [*chain*.then](https://github.com/koringz/reo.js/tree/master/components/reo.chain/ZH-CN.md#then) - resize chain convertion then method.
-* [*then*.next](https://github.com/koringz/reo.js/tree/master/components/reo.chain/ZH-CN.md#next) - get then orders.
-* [*then*.all](https://github.com/koringz/reo.js/tree/master/components/reo.chain/ZH-CN.md#all) - get all orders.
+* [reo.chain](https://github.com/koringz/reo.js/tree/master/components/reo.chain/ZH-CN.md#chain) - 创建一个链式方法
+* [*chain*.then](https://github.com/koringz/reo.js/tree/master/components/reo.chain/ZH-CN.md#then) - 实现链式调用then
+* [*then*.next](https://github.com/koringz/reo.js/tree/master/components/reo.chain/ZH-CN.md#next) - 按顺序获得then
+* [*then*.all](https://github.com/koringz/reo.js/tree/master/components/reo.chain/ZH-CN.md#all) - 获得所有then
 
 ## [Hook (reo-hook)](https://github.com/koringz/reo.js/tree/master/components/reo.hook/ZH-CN.md)
 使用钩子调用方法
-* [reo.hook](https://github.com/koringz/reo.js/tree/master/components/reo.hook/ZH-CN.md#hook)  - create a method hook.
-* [*hook*.then](https://github.com/koringz/reo.js/tree/master/components/reo.hook/ZH-CN.md#then)  - resize hook invoking then.
-* [*hook*.on](https://github.com/koringz/reo.js/tree/master/components/reo.hook/ZH-CN.md#on)  - get a module.
+* [reo.hook](https://github.com/koringz/reo.js/tree/master/components/reo.hook/ZH-CN.md#hook)  - 创建一个钩子方法
+* [*hook*.then](https://github.com/koringz/reo.js/tree/master/components/reo.hook/ZH-CN.md#then)  - 实现钩子调用then
+* [*hook*.on](https://github.com/koringz/reo.js/tree/master/components/reo.hook/ZH-CN.md#on)  - 获得一个模块
