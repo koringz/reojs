@@ -7,7 +7,7 @@
 创建一个chain链式方法。
 ```js
 var Chain = reo.chain({
-    module : 'next',
+    module : 'costom_module',
     val: [22,3,5] // mes1 = 22 ,mes2 = 3, mes3 = 5
 });
 ```

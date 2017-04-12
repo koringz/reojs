@@ -1,10 +1,10 @@
 # hook()
 通过`hook`钩子的调用机制，能够轻松的帮你调用到构造模块。
 
-创建一个组织构造模块，原型链的写法主要参照原生JavaScript写法，方便钩子调用此模块的原型链对象。注意：这个模块是自定义的构造函数，如下:。
+创建一个组织构造模块，原型链的写法主要参照原生JavaScript写法，方便钩子调用此模块的原型链对象。注意：这个模块是自定义的构造函数，如下:
 ```js
 function static () {};
-static.prototype.success = function  (a,b) {
+static.prototype.success = function (a,b) {
     return b === a;
 }
 ```
@@ -12,7 +12,7 @@ static.prototype.success = function  (a,b) {
 <a name="hook" href="#hook">#</a> reo.<b>hook</b>(object)
 
 如果调用一个模块module时，没有手动定义`then()`方法，就会失去调用模块的原型链对象，所以，在调用模块时，一定要有then方法。
-多次调用模块的时候，为了不改变模块内部`this`指针，你需要自定义`hook`方法。自定义方法如：`var hook = Reo.hook()`。
+多次调用模块的时候，为了不改变模块内部`this`指针，你需要自定义`hook`方法。自定义方法如下：
 ```js
 var hook = reo.hook({
     module : 'static', 

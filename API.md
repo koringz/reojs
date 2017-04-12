@@ -17,7 +17,7 @@ Method for resizing chain invoker.
 * [*then*.all](https://github.com/koringz/reo.js/tree/master/components/reo.chain/README.md#all) - get all orders.
 
 ## [Hook (reo-hook)](https://github.com/koringz/reo.js/tree/master/components/reo.hook/README.md)
-use Hook invoker.
+Use hook invoker.
 * [reo.hook](https://github.com/koringz/reo.js/tree/master/components/reo.hook/README.md#hook)  - create a method hook.
 * [*hook*.then](https://github.com/koringz/reo.js/tree/master/components/reo.hook/README.md#then)  - resize hook invoking then.
 * [*hook*.on](https://github.com/koringz/reo.js/tree/master/components/reo.hook/README.md#on)  - get a module.

@@ -19,7 +19,7 @@ Simple Call
 <script src="https://koringz.github.io/reojs/reo.0.0.2.min.js"></script>
 ```
 ## Documentation
- 在调用Reo API方法之前，需要实例一个Reojs库对象方便调用。
+ 在调用Reo API方法之前，需要实例一个reojs库对象方便调用。
 ```js
 var reo = new reo();
 ```
