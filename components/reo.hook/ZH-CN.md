@@ -40,7 +40,7 @@ own_then.on('success', function (api, msg){
 ```
 <a name="reader" href="#reader">#</a> own_then.<b>reader</b>()
 
-渲染的方式是通过reader()方法传入一个字符串，这个字符串是在on方法里面的字符串，如果你设置字符串，默认去情况就是输出最后一个模块的方法。
+渲染的方式是通过`reader()`方法传入一个字符串，这个字符串是在`on`方法里面的字符串，如果你未设置字符串，默认情况下，将会输出最后一个模块。
 ```js
 var ret = own_then.reader('success'); // => ret = 8yes
 或者: 

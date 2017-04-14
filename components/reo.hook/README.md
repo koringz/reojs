@@ -40,7 +40,7 @@ own_then.on('success', function (api, msg){
 ```
 <a name="reader" href="#reader">#</a> own_then.<b>reader</b>()
 
-The way to render is to pass a string through the `reader ()` method. This string is the string in the `on` method. If you set the string, the default is the way to output the last module.
+The way to render is to pass a string through the `reader ()` method, which is a string in the `on` method. If you do not set a string, the last module will be output by default.
 ```js
 var ret = own_then.reader('success'); // => ret = 8yes
 or use:
