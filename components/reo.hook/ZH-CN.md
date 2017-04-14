@@ -5,7 +5,7 @@
 ```js
 function static () {};
 static.prototype.success = function (a) {
-    return a;
+    return a+'yes';
 }
 ```
 
@@ -42,6 +42,7 @@ own_then.on('success', function (api, msg){
 
 渲染的方式是通过reader()方法传入一个字符串，这个字符串就是你在on方法里面的字符串，如果你设置字符串，默认去情况就是输出最后一个模块的方法。
 ```js
-var ret = own_then.reader('success'); // => ret = 8
-或者: own_then.reader();
+var ret = own_then.reader('success'); // => ret = 8yes
+或者: 
+var ret = own_then.reader(); // => ret = 8yes
 ```
