@@ -21,3 +21,4 @@ reo方法在路上...
 * [reo.hook](https://github.com/koringz/reo.js/tree/master/components/reo.hook/ZH-CN.md#hook)  - 创建一个钩子方法
 * [*hook*.then](https://github.com/koringz/reo.js/tree/master/components/reo.hook/ZH-CN.md#then)  - 实现钩子调用then
 * [*hook*.on](https://github.com/koringz/reo.js/tree/master/components/reo.hook/ZH-CN.md#on)  - 获得一个模块
+* [*hook*.reader](https://github.com/koringz/reo.js/tree/master/components/reo.hook/ZH-CN.md#reader)  - 渲染输出一个模块

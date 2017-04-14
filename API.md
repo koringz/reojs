@@ -21,3 +21,4 @@ Use hook invoker Method.
 * [reo.hook](https://github.com/koringz/reo.js/tree/master/components/reo.hook/README.md#hook)  - create a method hook.
 * [*hook*.then](https://github.com/koringz/reo.js/tree/master/components/reo.hook/README.md#then)  - resize hook invoking then.
 * [*hook*.on](https://github.com/koringz/reo.js/tree/master/components/reo.hook/README.md#on)  - get a module.
+* [*hook*.reader](https://github.com/koringz/reo.js/tree/master/components/reo.hook/ZH-CN.md#reader)  - reader output a module.
