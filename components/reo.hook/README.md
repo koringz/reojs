@@ -43,5 +43,6 @@ own_then.on('success', function (api, msg){
 The way to render is to pass a string through the `reader ()` method. This string is the string in the `on` method. If you set the string, the default is the way to output the last module.
 ```js
 var ret = own_then.reader('success'); // => ret = 8
-或者: own_then.reader();
+or use:
+var ret = own_then.reader();
 ```
