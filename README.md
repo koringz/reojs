@@ -13,11 +13,11 @@ Simple Call
 ## Installing
 if you want to supports the reojs library method, dowhnload this latest reojs library. because now do not support npm download, so only you  through the load link call reojs library. 
 ```js
-<script src="http://www.hao5599.com/reojs/reo.0.0.3.js"></script>
+<script src="http://www.hao5599.com/reojs/reo.0.0.4.js"></script>
 ```
 if you want to compress the version:
 ```js
-<script src="http://www.hao5599.com/reojs/min/reo.0.0.3.min.js"></script>
+<script src="http://www.hao5599.com/reojs/min/reo.0.0.4.min.js"></script>
 ```
 ## Documentation
 Before call reo api method, You need an instance of reojs library to call. 

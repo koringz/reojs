@@ -12,11 +12,11 @@ Simple Call
 ## Installing
 如果你想要支持reojs库方法，下载以下最新reojs库。由于不支持npm下载，所以目前只能通过加载链接调用reojs库:
 ```js
-<script src="https://koringz.github.io/reojs/reo.0.0.2.js"></script>
+<script src="http://www.hao5599.com/reojs/reo.0.0.4.js"></script>
 ```
 如果想要压缩版本:
 ```js
-<script src="https://koringz.github.io/reojs/reo.0.0.2.min.js"></script>
+<script src="http://www.hao5599.com/reojs/reo.0.0.4.min.js"></script>
 ```
 ## Documentation
  在调用Reo API方法之前，需要实例一个reojs库对象方便调用。
