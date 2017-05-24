@@ -13,7 +13,7 @@ var Chain = reo.chain({
 ```
 <a name="then" href="#then">#</a> chain.<b>then</b>(fn(api,msg,total))
 
-当调用`then()`方法时，会依次从val数组获得参数，并且`then()`内部的第一个参数为必填项。第二个参数message非必填，但是message必须从第二个`then()`方法开始记录。因为message只捕捉上一个`then()`的输出值。然后，第三个参数是`api()`方法，主要是回调作用，`api(...)`括号里面的参数将会被输出。
+当调用`then()`方法时，会依次从val数组获得参数，并且`then()`内部的参数mes1(参数名为自定义)为必填项。参数message(参数名为自定义)非必填，但是message必须从第二个`then()`方法开始记录。因为message只捕捉上一个`then()`的输出值。然后，第三个参数是`api()`方法，主要是回调作用，`api(...)`括号里面的参数将会被输出。
 
 ```js
 Chain.then(function ( api, mes1 ) {

@@ -10,7 +10,7 @@
         }
     }(function(exports) {
 
-        var _reo = typeof exports !== "undefined" ? exports : {};
+        var reo = typeof exports !== "undefined" ? exports : {};
         var doc = exports.document || document;
         var ARRSLICE_CHAIN = Array.prototype.slice;
         // call init the methods.
@@ -655,14 +655,14 @@
         // Default global properties.
         var doc = exports.document || document;
         function REO (element, options ) {
-            this.options = new order(element, options ) || {};
+            this.options = (new order(element, options )) || {};
             return this.options;
         };
         // Add a val in the method. it is Okay.
         var order = function ( element, options ) {};
         order.prototype = {
 
-            reojs : "0.0.4",
+            version : "0.0.4",
 
             dom : function(options) {
                 return document.querySelector(options)
@@ -750,23 +750,23 @@
 
         var _build = new REO();
         /*simply api*/
-        _reo.reojs = _build.reojs;
-        _reo.dom = _build.dom;
-        _reo.append = _build.append;
-        _reo.text = _build.text;
-        _reo.blank = _build.blank;
-        _reo.isStr = _build.isStr;
-        _reo.isObj = _build.isObj;
-        _reo.isFun = _build.isFun;
-        _reo.isNum = _build.isNum;
-        _reo.isArr = _build.isArr;
-        _reo.trim = _build.trim;
-        _reo.extend = _build.extend;
-        _reo.indexof = _build.indexof;
-        _reo.debug = _build.debug;
-        /*multi*/
-        _reo.hook = _build.hook;
-        _reo.chain = _build.chain;
-        _reo.template = _build.template;
+        reo.version = _build.version;
+        reo.dom = _build.dom;
+        reo.append = _build.append;
+        reo.text = _build.text;
+        reo.blank = _build.blank;
+        reo.isStr = _build.isStr;
+        reo.isObj = _build.isObj;
+        reo.isFun = _build.isFun;
+        reo.isNum = _build.isNum;
+        reo.isArr = _build.isArr;
+        reo.trim = _build.trim;
+        reo.extend = _build.extend;
+        reo.indexof = _build.indexof;
+        reo.debug = _build.debug;
+        /*multi api*/
+        reo.hook = _build.hook;
+        reo.chain = _build.chain;
+        reo.template = _build.template;
     });
 })(typeof window !== 'undefined' ? this : global);

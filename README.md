@@ -20,9 +20,9 @@ if you want to compress the version:
 <script src="http://www.hao5599.com/reojs/min/reo.0.0.4.min.js"></script>
 ```
 ## Documentation
-Before call reo api method, You need an instance of reojs library to call. 
+Currently, you support require loading the reojs library, and you can simply call the reojs module with the.File file loaded without invoking the instance REO object. If you don't use nodejs, you can call the reojs library anywhere you want to load the link.
 ```js
-var reo = new reo();
+const reo = require('/reo');
 ```
 ## License：
 Copyright (c) 2017-2025 koringz <ok234@foxmail.com> https://koringz.github.io

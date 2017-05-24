@@ -19,9 +19,9 @@ Simple Call
 <script src="http://www.hao5599.com/reojs/reo.0.0.4.min.js"></script>
 ```
 ## Documentation
- 在调用Reo API方法之前，需要实例一个reojs库对象方便调用。
+目前支持require加载reojs库，你只需要加载.file文件即可调用reojs模块，无需实例reo对象即可调用。如果你没有使用nodejs，只要加载链接，即可在任何地方调用reojs库的方法。
 ```js
-var reo = new reo();
+const reo = require('/reo');
 ```
 ## License：
 Copyright (c) 2017-2025 koringz <ok234@foxmail.com> https://koringz.github.io

@@ -1,6 +1,160 @@
-(function  (foctory) {
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+/******/
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__thenstatic__ = __webpack_require__(5);
+
+
+
+
+// 获得一个组织对象
+let on_static = __WEBPACK_IMPORTED_MODULE_0__thenstatic__["a" /* default */].on('success2',function  (api,a) {
+    api(a)
+}).on('caches',function  (api,a) {
+    api(a)
+});
+
+/* harmony default export */ __webpack_exports__["a"] = (on_static);
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// 管理组织模块
+function _static () {};
+_static.prototype.success2 = function  (v) {
+    return {
+        val : v,
+    }
+}
+_static.prototype.caches = function  (a,v) {
+    var pre = a;
+
+    return {
+        twice : a,
+        self : caches,
+        val : v+a.val
+    }
+}
+
+
+/* harmony default export */ __webpack_exports__["a"] = (_static);
+
+/***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__handlermodel__ = __webpack_require__(1);
+
+const reo = __webpack_require__(4);
+
+// // 创建一个管理模块的钩子
+let hook_static = reo.hook({
+//     // 模块 function static() {}
+    module : __WEBPACK_IMPORTED_MODULE_0__handlermodel__["a" /* default */],
+//     // 原始值 3
+    val : 5
+});
+
+
+/* harmony default export */ __webpack_exports__["a"] = (hook_static);
+
+/***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__onstatic__ = __webpack_require__(0);
+
+
+// 渲染模块获得输出值
+var results = __WEBPACK_IMPORTED_MODULE_0__onstatic__["a" /* default */].reader();
+
+document.querySelector(".test01").innerHTML = results.val;
+
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {(function  (foctory) {
     !function(factory) {
-        if (typeof require === 'function' && typeof exports === 'object' && typeof module === 'object') {
+        if (true) {
             var target = module['exports'] || exports; 
             factory(target);
         } else if (typeof define === 'function' && define['amd']) { // AMD
@@ -10,7 +164,7 @@
         }
     }(function(exports) {
 
-        var _reo = typeof exports !== "undefined" ? exports : {};
+        var reo = typeof exports !== "undefined" ? exports : {};
         var doc = exports.document || document;
         var ARRSLICE_CHAIN = Array.prototype.slice;
         // call init the methods.
@@ -655,14 +809,14 @@
         // Default global properties.
         var doc = exports.document || document;
         function REO (element, options ) {
-            this.options = new order(element, options ) || {};
+            this.options = (new order(element, options )) || {};
             return this.options;
         };
         // Add a val in the method. it is Okay.
         var order = function ( element, options ) {};
         order.prototype = {
 
-            reojs : "0.0.4",
+            version : "0.0.4",
 
             dom : function(options) {
                 return document.querySelector(options)
@@ -750,23 +904,80 @@
 
         var _build = new REO();
         /*simply api*/
-        _reo.reojs = _build.reojs;
-        _reo.dom = _build.dom;
-        _reo.append = _build.append;
-        _reo.text = _build.text;
-        _reo.blank = _build.blank;
-        _reo.isStr = _build.isStr;
-        _reo.isObj = _build.isObj;
-        _reo.isFun = _build.isFun;
-        _reo.isNum = _build.isNum;
-        _reo.isArr = _build.isArr;
-        _reo.trim = _build.trim;
-        _reo.extend = _build.extend;
-        _reo.indexof = _build.indexof;
-        _reo.debug = _build.debug;
-        /*multi*/
-        _reo.hook = _build.hook;
-        _reo.chain = _build.chain;
-        _reo.template = _build.template;
+        reo.version = _build.version;
+        reo.dom = _build.dom;
+        reo.append = _build.append;
+        reo.text = _build.text;
+        reo.blank = _build.blank;
+        reo.isStr = _build.isStr;
+        reo.isObj = _build.isObj;
+        reo.isFun = _build.isFun;
+        reo.isNum = _build.isNum;
+        reo.isArr = _build.isArr;
+        reo.trim = _build.trim;
+        reo.extend = _build.extend;
+        reo.indexof = _build.indexof;
+        reo.debug = _build.debug;
+        /*multi api*/
+        reo.hook = _build.hook;
+        reo.chain = _build.chain;
+        reo.template = _build.template;
     });
 })(typeof window !== 'undefined' ? this : global);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+
+/***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__hookstatic__ = __webpack_require__(2);
+
+
+
+// 创建一个hook_static返回值
+
+let hook_static_then = __WEBPACK_IMPORTED_MODULE_0__hookstatic__["a" /* default */]
+.then(function ( msg1 ) {
+    this.bool = true;
+    this.msg1 = msg1;
+    this.callOnce = 'YES';
+    msg1 += 0;
+    return msg1
+},function  (msg2) {
+    msg2 += 10;
+    return  msg2
+});
+
+/* harmony default export */ __webpack_exports__["a"] = (hook_static_then);
+
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ })
+/******/ ]);

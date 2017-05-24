@@ -38,12 +38,12 @@ module.exports = function(grunt) {
 
   // webpack提供require模块和common模块的js管理调用风格
   var defineWebpack = {
-      components: {
+      /*components: {
         entry: './components/handlereomethods/validMethod.js',  // This is js components path.
         output: {
           filename: './dest/handlereomethods/validMethod.js'  // Save to lib handle path.
         }
-      },
+      },*/
       test : {
         entry : './dest/dist/test.results.js',
         output : {
@@ -54,6 +54,12 @@ module.exports = function(grunt) {
         entry : './dest/dist/reo.js',
         output : {
           filename : './dest/dist/runtime/reo.js'
+        }
+      },
+      hook : {
+        entry: './dist/hookmodel/readerstatic.js',  // This is js components path.
+        output : {
+          filename : './dest/hook.js'
         }
       },
 
