@@ -1,0 +1,150 @@
+<html>  
+<head>  
+    <meta charset='utf-8'>
+    <title>REO.template.JS</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <link rel="stylesheet" type="text/css" href="./package-with-hookcss.css">
+</head>  
+<body>
+<div class=" main">
+	<h1>Reo.js <code>&lt;api: template()&gt;</code></h1>
+</div>
+<div class="container">
+</div>
+<div class="container">
+</div>
+<div class="container">
+	<div class="top" style="width : 100%;height:420px;background-color: #272822;color: #F8F8F2">
+		<h1>演示：</h1>
+		<h3>HTML:</h3>
+		<strong> name:</strong> <span>{{personal.unit}} </span>
+		<br>
+		<strong>address: </strong> <span>{{personal.address}}</span>
+		<br>
+		<strong>QQ: </strong> <span>{{email.seconds.num}}{{email.seconds.signals}}</span>
+		<br>
+		<br>
+		<h3>JS:</h3>
+		<span style="width : 500px;height:500px;background-color: #272822;color: #F8F8F2">
+				reo.template({
+				<br>
+				&nbsp;&nbsp;target : '#container',
+				<br>
+				&nbsp;&nbsp;		template : '#temp',
+				<br>
+				&nbsp;&nbsp;		val : {
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			personal : {
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				unit : "The China",
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				address : "Shanghai Baoshanqu Qihua rd",
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				}
+				<br>
+				&nbsp;&nbsp;				}
+				<br>
+				&nbsp;});
+		</span>
+	</div>
+</div>
+<div class="container" id="container">
+</div>
+</body>
+ <script src="./reo.0.0.5.js"></script>
+
+	<script id="temp" type="text/html">
+	<div>	
+		<h3>介绍：个人信息</h3>
+		<div style="color:{{personal.css.color}}">
+			<span>
+				<strong>name:</strong>{{personal.unit}} <br/>
+			</span>
+			<span>
+				<strong>address:</strong>{{personal.address}} <br/>
+			</span>
+			<span>
+				<strong>{{email.name}}:</strong>{{email.seconds.num}}{{email.seconds.signals}}{{email.seconds.thirds.fouth}}{{email.seconds.thirds.five.six}}
+			</span>
+		</div>
+		<h3>市场：蔬菜</h3>
+		<table>
+			<tr>
+				<th>名称 </th>
+				<th>价格 </th>
+				<th>重量 </th>
+				<th>合计 </th>
+			</tr>
+			<tr>
+				<th>{{fruit.name}}</th>
+				<th>{{fruit.price}}</th>
+				<th>{{fruit.quantity}}</th>
+				<th style="color:{{personal.css.color}}">
+				{{sort(fruit.price)}}</th>
+			</tr>
+		</table>
+		<div>
+		</div>
+	</div>
+</script>
+<script>
+var con = 
+reo.template({
+	target : '#container',
+	template : '#temp',
+	val : {
+		'personal' : {
+			unit : "The China",
+			address : "Shanghai Baoshanqu Qihua rd",
+			css : {
+				color : 'blue'
+			}
+		},
+		email : {
+			name : 'QQ',
+			seconds : {
+				num : 260713986,
+				signals : '@',
+				thirds : {
+					fouth :'qq',
+					five : {
+						six : '.com'
+					}
+				}
+			}
+		},
+		qout : {
+			seconds : {
+				child : 'qq.com',
+				thirds : {
+					fouth :'.com',
+					five : {
+						six : {
+							seven : {
+								eight :'eight'
+							}
+						}
+					}
+				}
+			}
+		},
+		fruit : {
+			name : 'banana',
+			price : 0.25,
+			quantity : 5
+		},
+		num : 9999,
+		output : function  (options) {
+			return options
+		},
+		sort : function  (options) {
+			return options * 5
+		}
+	}
+});
+console.log(con)
+</script>
+</html>
+<!-- https://github.com/danlevan/bracket-template -->
+<!-- https://ractive.js.org/ -->

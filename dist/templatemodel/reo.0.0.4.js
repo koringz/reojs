@@ -667,7 +667,7 @@
         }
 
         signatureCompile.prototype.parser = function  (fileName,option) {
-          
+            
         }
 
         // Default global properties.

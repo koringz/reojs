@@ -1,5 +1,6 @@
 import _static from "./handlermodel";
-const reo = require('./reo.0.0.4');
+var reo = require('./reo.0.0.4');
+
 
 // // 创建一个管理模块的钩子
 let hook_static = reo.hook({

@@ -62,6 +62,12 @@ module.exports = function(grunt) {
           filename : './dest/hook.js'
         }
       },
+      reojs :{
+        entry: './dist/templatemodel/template.js',  // This is js components path.
+        output : {
+          filename : './dest/template.js'
+        }
+      }
 
   };
 

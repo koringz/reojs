@@ -119,7 +119,8 @@ _static.prototype.caches = function  (a,v) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__handlermodel__ = __webpack_require__(1);
 
-const reo = __webpack_require__(4);
+var reo = __webpack_require__(4);
+
 
 // // 创建一个管理模块的钩子
 let hook_static = reo.hook({
@@ -806,6 +807,24 @@ document.querySelector(".test01").innerHTML = results.val;
             return param;
         };
 
+
+        /* 
+         @param define template engine mehtods.
+        
+        */
+
+        function signatureCompile () {
+
+        }
+
+        signatureCompile.prototype.initilization = function  (option) {
+
+        }
+
+        signatureCompile.prototype.parser = function  (fileName,option) {
+          
+        }
+
         // Default global properties.
         var doc = exports.document || document;
         function REO (element, options ) {
@@ -897,7 +916,7 @@ document.querySelector(".test01").innerHTML = results.val;
             
             // got template function 
             template : function  (options) {
-                return new template(options,this)
+                return new signatureCompile(options,this)
             }
         };
 
