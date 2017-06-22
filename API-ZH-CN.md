@@ -6,7 +6,9 @@
 
 * [Hook](#hook-reo-hook)
 
-reo方法在路上...
+* [Template](#template-reo-template)
+
+更多reo方法在路上...
 
 
 ## [Chain (reo-chain)](https://github.com/koringz/reo.js/tree/master/components/reo.chain/ZH-CN.md)
@@ -22,3 +24,7 @@ reo方法在路上...
 * [*hook*.then](https://github.com/koringz/reo.js/tree/master/components/reo.hook/ZH-CN.md#then)  - 实现钩子调用then
 * [*hook*.on](https://github.com/koringz/reo.js/tree/master/components/reo.hook/ZH-CN.md#on)  - 获得一个模块
 * [*hook*.reader](https://github.com/koringz/reo.js/tree/master/components/reo.hook/ZH-CN.md#reader)  - 渲染输出一个模块
+
+## [Template (reo-template)](https://github.com/koringz/reo.js/tree/master/components/reo.template/README.md)
+使用模版调用方法
+* [开始使用](https://github.com/koringz/reo.js/tree/master/components/reo.template/README.md#template)  - 创建一个模版方法

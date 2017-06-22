@@ -6,6 +6,8 @@ This is an API method reo.js library.
 
 * [Hook](#hook-reo-hook)
 
+* [Template](#template-reo-template)
+
 REO method on the road...
 
 
@@ -22,3 +24,7 @@ Use hook invoker Method.
 * [*hook*.then](https://github.com/koringz/reo.js/tree/master/components/reo.hook/README.md#then)  - resize hook invoking then.
 * [*hook*.on](https://github.com/koringz/reo.js/tree/master/components/reo.hook/README.md#on)  - get a module.
 * [*hook*.reader](https://github.com/koringz/reo.js/tree/master/components/reo.hook/README.md#reader)  - reader output a module.
+
+## [Template (reo-template)](https://github.com/koringz/reo.js/tree/master/components/reo.template/README.md)
+Use template invoker Method.
+* [Hello world!](https://github.com/koringz/reo.js/tree/master/components/reo.template/README.md#template)  - create a method template.
